@@ -1,0 +1,47 @@
+<footer>
+    <div class="social-links">
+        <span>Página creada con Astro por Abraham</span>
+        <a target="_blank" href="https://github.com/abrijudo?tab=repositories">
+            <img src="/src/assets/Github.svg" alt="Enlace a mi Github">
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/abraham-Álvarez-leal/">
+            <img src="/src/assets/LinkedIn.svg" alt="Enlace a mi LinkedIn">
+        </a>
+    </div>
+</footer>
+
+<style>
+/* Elimina el subrayado de los enlaces */
+.social-links a {
+    text-decoration: none;
+}
+
+/* Ajusta las imágenes para evitar espacios verticales */
+.social-links img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 32px; /* Tamaño de los íconos */
+    height: 32px;
+}
+
+/* Organiza los íconos de manera limpia */
+.social-links {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 10px; /* Espacio entre los íconos y el texto */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilo para el texto */
+.social-links span {
+    font-size: 1rem; /* Tamaño del texto */
+    margin-right: 10px; /* Espacio entre el texto y los íconos */
+}
+
+/* Efecto hover para los íconos */
+.social-links img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del 20% */
+}
+</style>

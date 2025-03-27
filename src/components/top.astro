@@ -1,0 +1,84 @@
+---
+---
+<div class="profile-section">
+    <div class="profile-picture">
+        <img src="/src/assets/fotoPerfil.avif" alt="Mi foto">
+    </div>
+    <div class="profile-info">
+        <h1>Abraham Álvarez Leal</h1>
+        <p>Desarrollador web, multiplataforma y experto en accesibilidad</p>
+        <p class="extraDatos">Incorporación inmediata - Flexibilidad horaria - Carnet de conducir</p>
+    </div>
+</div>
+
+<style>
+/* Estilo general para el contenedor principal */
+.profile-section {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 20px; /* Espacio entre la foto y el texto */
+}
+
+/* Estilo para el contenedor de la foto */
+.profile-picture {
+    width: 150px; /* Tamaño fijo para la foto */
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+}
+
+.profile-picture img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+/* Estilo para el contenedor de información */
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Organiza el título y el subtítulo verticalmente */
+    gap: 5px; /* Espacio entre el título y el subtítulo */
+    max-width: 800px; /* Limita el ancho máximo del texto */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+/* Estilo para el título */
+.profile-info h1 {
+    font-size: 2rem; /* Tamaño grande para el título */
+    margin: 0; /* Elimina márgenes innecesarios */
+}
+
+/* Estilo para el subtítulo */
+.profile-info p {
+    font-size: 1.2rem; /* Tamaño más pequeño que el título */
+    margin: 0; /* Elimina márgenes innecesarios */
+}
+.extraDatos{
+    font-size: 0.8em;
+}
+
+/* Media Queries para pantallas móviles */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        gap: 10px; /* Reduce el espacio entre la foto y el texto */
+    }
+
+    .profile-picture {
+        width: 100px; /* Reduce el tamaño de la foto en pantallas móviles */
+        height: 100px;
+    }
+
+    .profile-info {
+        max-width: none; /* No limita el ancho en pantallas móviles */
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .profile-info p {
+        font-size: 1rem; /* Reduce el tamaño del subtítulo */
+    }
+}
+</style>

@@ -1,0 +1,54 @@
+---
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/fotoPagina.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Mi historia</title>
+    </head>
+    <body>
+        <div class="folio-container">
+            <slot />
+        </div>
+    </body>
+</html>
+
+<style>
+    /* Estilo general para el cuerpo */
+    html,
+    body {
+        background-color: #F5F5F5; /* Fondo claro */
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+    }
+
+    /* Estilo del contenedor principal (hoja de papel) */
+    .folio-container {
+        max-width: 1000px; /* Limita el ancho para pantallas grandes */
+        max-height: 800px; /* Alto proporcional a un folio A4 (1:1.414) */
+        border: 2px solid #333; /* Borde negro para simular un folio */
+        padding: 20px; /* Espacio interno */
+        background-color: white; /* Fondo blanco para el contenido */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+        text-align: center; /* Centra el texto */
+        box-sizing: border-box; /* Asegura que el borde forme parte del tamaño total del contenedor */
+        overflow-y: auto; /* Permite desplazarse verticalmente si el contenido es más alto que el viewport */
+    }
+
+    /* Estilo para los contenidos internos */
+    .folio-container * {
+        margin: 0; /* Elimina márgenes predeterminados */
+        box-sizing: border-box; /* Asegura que todos los elementos consideren bordes y padding en su tamaño */
+    }
+
+    /* Espaciado entre secciones */
+    .folio-container > * + * {
+        margin-top: 20px; /* Agrega espacio vertical entre secciones */
+    }
+</style>
